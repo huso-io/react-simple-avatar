@@ -127,35 +127,30 @@ jspm_packages
 #  \ \____/\ \____\ \ \__\ \ \____/ \ \_\\ \__/.\_\\ \_\\ \_\ \_\\/\____/
 #   \/___/  \/____/  \/__/  \/___/   \/_/ \/__/\/_/ \/_/ \/_/\/_/ \/___/
 
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
-
-*.iml
-
-## Directory-based project format:
-.idea/
-# if you remove the above rule, at least ignore the following:
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# .idea/dictionaries
+.idea/workspace.xml
+.idea/tasks.xml
 
 # Sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
-# .idea/uiDesigner.xml
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
 
 # Gradle:
-# .idea/gradle.xml
-# .idea/libraries
+.idea/gradle.xml
+.idea/libraries
 
 # Mongo Explorer plugin:
-# .idea/mongoSettings.xml
+.idea/mongoSettings.xml
 
 ## File-based project format:
-*.ipr
 *.iws
 
 ## Plugin-specific files:
@@ -173,6 +168,7 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+fabric.properties
 
 # ____              __       ___                                  ______                 __
 #/\  _`\           /\ \     /\_ \    __                          /\__  _\               /\ \__
@@ -235,12 +231,18 @@ GitHub.sublime-settings
 #   \ `\___/ \ \_\\ \_\ \_\ \_\
 #    `\/__/   \/_/ \/_/\/_/\/_/
 
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+# session
 Session.vim
+# temporary
 .netrwhist
 *~
+# auto-generated tag files
+tags
 
 # __  __            __                                  __   ____     ____
 #/\ \/\ \          /\ \__                              /\ \ /\  _`\  /\  _`\
@@ -564,6 +566,60 @@ __pycache__/
 *.tmproj
 *.tmproject
 tmtags
+
+# ____
+#/\  _`\
+#\ \ \L\_\    ___ ___       __       ___     ____
+# \ \  _\L  /' __` __`\   /'__`\    /'___\  /',__\
+#  \ \ \L\ \/\ \/\ \/\ \ /\ \L\.\_ /\ \__/ /\__, `\
+#   \ \____/\ \_\ \_\ \_\\ \__/.\_\\ \____\\/\____/
+#    \/___/  \/_/\/_/\/_/ \/__/\/_/ \/____/ \/___/
+
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
 
 # ______                  __                                   ____          __
 #/\__  _\                /\ \__           __                  /\  _`\    __ /\ \__

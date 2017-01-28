@@ -20,25 +20,28 @@ yarn add react-simple-avatar
 ## Usage
 
 ```javascript
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { RouterAvatar, LinkAvatar, Initials, Src } from 'react-simple-avatar';
+import FullCanvas from 'react-fullcanvas';
 import svgAvatar from './assets/img/avatar.svg';
 
 ReactDOM.render(
-  <div className='example'>
+  <FullCanvas className='example'>
     <RouterAvatar
      to='#'
      alt='沈维忠'
-     size={ 48 }
-     style={ color: '#000' }
-     className='foundation-avatar'>
+     size={ 58 }
+     style={ {color: '#000'} }
+     className='foundation-avatar round-box-5px border-2px'>
       <Initials
        text='沈'
-       style={ color= '#000' }
+       size={ 30 }
+       style={ {color: '#f00'} }
        className='foundation-avatar-initials' />
       <Src
        from={ svgAvatar }
-       style={ display: 'inline-block' }
+       style={ {display: 'inline-block'} }
        className='foundation-avatar-src' />
       /*
         or, you can put your own avatar plugin here.
@@ -48,7 +51,7 @@ ReactDOM.render(
         ...
       */
     </RouterAvatar>
-  </div>,
+  </FullCanvas>,
   document.getElementById('root')
 );
 ```
@@ -56,25 +59,28 @@ ReactDOM.render(
 Or,
 
 ```javascript
+var React        = require('react');
 var ReactDOM     = require('react-dom');
 var SimpleAvatar = require('react-simple-avatar');
+var FullCanvas   = require('react-fullcanvas');
 var svgAvatar    = require('./assets/img/avatar.svg');
 
 ReactDOM.render(
-  <div className='example'>
+  <FullCanvas className='example'>
     <SimpleAvatar.LinkAvatar
      to='#'
      alt='沈维忠'
-     size={ 48 }
-     style={ color: '#000' }
-     className='foundation-avatar'>
+     size={ 58 }
+     style={ {color: '#000'} }
+     className='foundation-avatar round-box-5px border-2px'>
       <SimpleAvatar.Initials
        text='沈'
-       style={ color= '#000' }
+       size={ 30 }
+       style={ {color: '#f00'} }
        className='foundation-avatar-initials' />
       <SimpleAvatar.Src
        from={ svgAvatar }
-       style={ display: 'inline-block' }
+       style={ {display: 'inline-block'} }
        className='foundation-avatar-src' />
       /*
         or, you can put your own avatar plugin here.
@@ -84,7 +90,7 @@ ReactDOM.render(
         ...
       */
     </SimpleAvatar.LinkAvatar>
-  </div>,
+  </FullCanvas>,
   document.getElementById('root')
 );
 ```

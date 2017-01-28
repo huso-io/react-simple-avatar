@@ -7,7 +7,7 @@ describe("<RouterAvatar />", () => {
   it("renders children when passed in", () => {
     expect(
       shallow(
-        <RouterAvatar>
+        <RouterAvatar size={ 58 }>
           <Initials size={ 30 }/>
         </RouterAvatar>
       )
@@ -17,16 +17,16 @@ describe("<RouterAvatar />", () => {
 
   it("matches a provided selector 'avatar router-avatar'", () => {
     expect(
-      shallow(<RouterAvatar />)
+      shallow(<RouterAvatar size={ 58 } />)
       .is('.avatar.router-avatar')
     ).to.equal(true);
   });
 
   it("matches a provided HTML markup", () => {
-    let renderedHtml = '<div class="avatar router-avatar" data-radium="true" style="position: relative; z-index: 0; overflow: hidden; box-sizing: border-box; display: inline-block; background-color: rgb(183, 183, 183);"><a style="display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
+    let renderedHtml = '<div class="avatar router-avatar" data-radium="true" style="position: relative; z-index: 0; overflow: hidden; box-sizing: border-box; display: inline-block; background-color: rgb(183, 183, 183); width: 58px; height: 58px;"><a style="display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
     expect(
       mount(
-        <RouterAvatar>
+        <RouterAvatar size={ 58 }>
           <Src from='http://placehold.it/16x16'/>
         </RouterAvatar>
       )
@@ -37,7 +37,7 @@ describe("<RouterAvatar />", () => {
   it("contains only one node", () => {
     expect(
       mount(
-        <RouterAvatar>
+        <RouterAvatar size={ 58 }>
           <Initials size={ 30 }/>
           <Src from='http://placehold.it/16x16'/>
         </RouterAvatar>
@@ -49,21 +49,25 @@ describe("<RouterAvatar />", () => {
 
   it("exists the current node", () => {
     expect(
-      mount(<RouterAvatar />)
+      mount(<RouterAvatar size={ 58 } />)
       .exists('.avatar')
     ).to.equal(true);
   });
 
   it("type of the current node is 'div'", () => {
     expect(
-      shallow(<RouterAvatar />)
+      shallow(<RouterAvatar size={ 58 } />)
       .type()
     ).to.equal('div');
   });
 
   it("matches a provided final class 'round-box-5px border-2px'", () => {
     expect(
-      shallow(<RouterAvatar className='round-box-5px border-2px' />)
+      shallow(
+        <RouterAvatar
+         size={ 58 }
+         className='round-box-5px border-2px' />
+       )
       .props()
       .className
     ).to.equal('avatar router-avatar round-box-5px border-2px');
@@ -98,7 +102,7 @@ describe("<LinkAvatar />", () => {
   it("renders children when passed in", () => {
     expect(
       shallow(
-        <LinkAvatar>
+        <LinkAvatar size={ 58 }>
           <Initials size={ 30 }/>
         </LinkAvatar>
       )
@@ -108,16 +112,16 @@ describe("<LinkAvatar />", () => {
 
   it("matches a provided selector 'avatar link-avatar'", () => {
     expect(
-      shallow(<LinkAvatar />)
+      shallow(<LinkAvatar size={ 58 } />)
       .is('.avatar.link-avatar')
     ).to.equal(true);
   });
 
   it("matches a provided HTML markup", () => {
-    let renderedHtml = '<div class="avatar link-avatar" data-radium="true" style="position: relative; z-index: 0; overflow: hidden; box-sizing: border-box; display: inline-block; background-color: rgb(183, 183, 183);"><a data-radium="true" style="display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
+    let renderedHtml = '<div class="avatar link-avatar" data-radium="true" style="position: relative; z-index: 0; overflow: hidden; box-sizing: border-box; display: inline-block; background-color: rgb(183, 183, 183); width: 58px; height: 58px;"><a data-radium="true" style="display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
     expect(
       mount(
-        <LinkAvatar>
+        <LinkAvatar size={ 58 }>
           <Src from='http://placehold.it/16x16'/>
         </LinkAvatar>
       )
@@ -128,7 +132,7 @@ describe("<LinkAvatar />", () => {
   it("contains only one node", () => {
     expect(
       mount(
-        <LinkAvatar>
+        <LinkAvatar size={ 58 }>
           <Initials size={ 30 }/>
           <Src from='http://placehold.it/16x16'/>
         </LinkAvatar>
@@ -140,21 +144,25 @@ describe("<LinkAvatar />", () => {
 
   it("exists the current node", () => {
     expect(
-      mount(<LinkAvatar />)
+      mount(<LinkAvatar size={ 58 } />)
       .exists('.avatar')
     ).to.equal(true);
   });
 
   it("type of the current node is 'div'", () => {
     expect(
-      shallow(<LinkAvatar />)
+      shallow(<LinkAvatar size={ 58 } />)
       .type()
     ).to.equal('div');
   });
 
   it("matches a provided final class 'round-box-5px border-2px'", () => {
     expect(
-      shallow(<LinkAvatar className='round-box-5px border-2px' />)
+      shallow(
+        <LinkAvatar
+         size={ 58 }
+         className='round-box-5px border-2px' />
+       )
       .props()
       .className
     ).to.equal('avatar link-avatar round-box-5px border-2px');

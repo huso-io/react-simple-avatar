@@ -72,8 +72,8 @@
     "react": "global:React"
   },
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --env=dev --progress --colors --open",
-    "build": "gulp",
+    "start": "BABEL_ENV=development node_modules/.bin/webpack-dev-server --env=dev --progress --colors --open",
+    "build": "BABEL_ENV=production gulp",
     "lint": "node_modules/.bin/eslint -c .eslintrc --quiet ./src/**",
     "test": "node_modules/.bin/nyc --reporter=html --reporter=text node_modules/.bin/mocha test/setup.js test/index.js",
     "flow": "node_modules/.bin/flow check",

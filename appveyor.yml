@@ -38,8 +38,18 @@ test_script:
   - ps: "npm test # PowerShell" # Pass comment to PS for easier debugging
   - cmd: npm test
 
-# Don't actually build.
-build: off
+build:
+  parallel: true
+  verbosity: minimal
+
+notifications:
+- provider: Email
+  to:
+  - swzyocowboy@icloud.com
+  subject: '`react-simple-avatar` auto build status'
+  on_build_success: true
+  on_build_failure: true
+  on_build_status_changed: true
 
 # Set build version format here instead of in the admin panel.
 version: "{build}"

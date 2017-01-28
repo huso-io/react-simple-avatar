@@ -21,12 +21,12 @@ yarn add react-simple-avatar
 
 ```javascript
 import ReactDOM from 'react-dom';
-import { Avatar, Initials, Src } from 'react-simple-avatar';
+import { RouterAvatar, LinkAvatar, Initials, Src } from 'react-simple-avatar';
 import svgAvatar from './assets/img/avatar.svg';
 
 ReactDOM.render(
   <div className='example'>
-    <Avatar
+    <RouterAvatar
      to='#'
      alt='沈维忠'
      size={ 48 }
@@ -42,11 +42,12 @@ ReactDOM.render(
        className='foundation-avatar-src' />
       /*
         or, you can put your own avatar plugin here.
-        Maybe it's a layer to show user permissions.
-        Who knows what else ~
+        Maybe it's a layer to show user permissions;
+        a loader for avatar; the avatar fetched from
+        twitter... Who knows what else ~
         ...
       */
-    </Avatar>
+    </RouterAvatar>
   </div>,
   document.getElementById('root')
 );
@@ -61,7 +62,7 @@ var svgAvatar    = require('./assets/img/avatar.svg');
 
 ReactDOM.render(
   <div className='example'>
-    <SimpleAvatar.Avatar
+    <SimpleAvatar.LinkAvatar
      to='#'
      alt='沈维忠'
      size={ 48 }
@@ -77,11 +78,12 @@ ReactDOM.render(
        className='foundation-avatar-src' />
       /*
         or, you can put your own avatar plugin here.
-        Maybe it's a layer to show user permissions.
-        Who knows what else ~
+        Maybe it's a layer to show user permissions;
+        a loader for avatar; the avatar fetched from
+        twitter... Who knows what else ~
         ...
       */
-    </SimpleAvatar.Avatar>
+    </SimpleAvatar.LinkAvatar>
   </div>,
   document.getElementById('root')
 );

@@ -1,0 +1,5 @@
+.publish/*
+lib/*
+dist/*
+example/*
+node_modules/*

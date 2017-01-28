@@ -1,0 +1,90 @@
+{
+  "name": "react-simple-avatar",
+  "version": "0.0.0",
+  "description": "Used to show avatar. Can be easily & highly customized. Built with classnames, radium. This project just ensure the minimum but the most efficient code. You can use plugins or write your own avatar layer component to extend it. It's suitable for both of `react-router` and `react redux` project.",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "author": [
+    "iTonyYo <ceo@holaever.com> (https://itonyyo.com)"
+  ],
+  "homepage": "https://github.com/iTonyYo/react-simple-avatar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iTonyYo/react-simple-avatar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iTonyYo/react-simple-avatar/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "radium": "^0.18.1",
+    "react-fullcanvas": "^1.0.4",
+    "react-router": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-jscript": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "chai": "^3.5.0",
+    "config": "^1.24.0",
+    "del": "^2.2.2",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.14.1",
+    "eslint-plugin-compat": "^1.0.1",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "flow-bin": "^0.38.0",
+    "flow-remove-types": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "jsdom": "^9.9.1",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "mocha": "^3.2.0",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "next",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "through2": "^2.0.3",
+    "webpack": "2.2.0",
+    "webpack-dev-server": "2.2.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2"
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --env=dev --progress --colors --open",
+    "build": "gulp",
+    "lint": "node_modules/.bin/eslint -c .eslintrc --quiet ./src/**",
+    "test": "node_modules/.bin/mocha test/setup.js test/index.js",
+    "flow": "node_modules/.bin/flow check"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-simple-avatar",
+    "react-avatar"
+  ],
+  "private": false,
+  "engines": {
+    "node": ">=6.9.1 <=7.4.0",
+    "npm": ">=3.10 <=4.1.2"
+  },
+  "license": "MIT"
+}

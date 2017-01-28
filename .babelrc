@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["env", {"modules": false}],
+    "latest",
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-flow-strip-types",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-es3-property-literals",
+    "transform-es3-member-expression-literals",
+    "transform-jscript",
+    "transform-decorators-legacy"
+  ]
+}

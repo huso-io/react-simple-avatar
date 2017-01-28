@@ -52,6 +52,7 @@
     "lodash": "^4.17.4",
     "minimist": "^1.2.0",
     "mocha": "^3.2.0",
+    "nyc": "^10.1.2",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -72,8 +73,9 @@
     "start": "node_modules/.bin/webpack-dev-server --env=dev --progress --colors --open",
     "build": "gulp",
     "lint": "node_modules/.bin/eslint -c .eslintrc --quiet ./src/**",
-    "test": "node_modules/.bin/mocha test/setup.js test/index.js",
-    "flow": "node_modules/.bin/flow check"
+    "test": "node_modules/.bin/nyc --reporter=html --reporter=text node_modules/.bin/mocha test/setup.js test/index.js",
+    "flow": "node_modules/.bin/flow check",
+    "coverage": "node_modules/.bin/nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "react",

@@ -21,6 +21,7 @@ install:
   # Get the latest stable version of Node 0.STABLE.latest
   - ps: Install-Product node $env:nodejs_version
   # Gulp-specific stuff.
+  - npm install -g npm
   - npm install -g babel
   - npm install -g gulp
   - npm install -g mocha

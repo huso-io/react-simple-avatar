@@ -1,6 +1,6 @@
 {
   "name": "react-simple-avatar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Used to show avatar. Can be easily & highly customized. Built with classnames, radium. This project just ensure the minimum but the most efficient code. You can use plugins or write your own avatar layer component to extend it. It's suitable for both of `react-router` and `react redux` project.",
   "main": "./lib/index.js",
   "module": "./lib/index.js",

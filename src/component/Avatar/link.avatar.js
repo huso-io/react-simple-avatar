@@ -7,14 +7,12 @@ import cn from 'classnames';
 let styles = {
   default: {
     container: {
-      position: 'relative',
-      zIndex: 0,
       overflow: 'hidden',
-      boxSizing: 'border-box',
-      display: 'inline-block',
-      backgroundColor: '#B7B7B7'
+      display: 'inline-block'
     },
     link: {
+      position: 'relative',
+      zIndex: 0,
       display: 'block',
       width: '100%',
       height: '100%',

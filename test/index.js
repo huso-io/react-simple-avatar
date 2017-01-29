@@ -23,7 +23,7 @@ describe("<RouterAvatar />", () => {
   });
 
   it("matches a provided HTML markup", () => {
-    let renderedHtml = '<div class="avatar router-avatar" data-radium="true" style="position: relative; z-index: 0; overflow: hidden; box-sizing: border-box; display: inline-block; background-color: rgb(183, 183, 183); width: 58px; height: 58px;"><a style="display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
+    let renderedHtml = '<div class="avatar router-avatar" data-radium="true" style="overflow: hidden; display: inline-block; width: 58px; height: 58px;"><a style="position: relative; z-index: 0; display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
     expect(
       mount(
         <RouterAvatar size={ 58 }>
@@ -84,15 +84,11 @@ describe("<RouterAvatar />", () => {
       .props()
       .style,
       {
-        position: 'relative',
         zIndex: 1,
-        MozBoxSizing: 'border-box',
         overflow: 'hidden',
-        boxSizing: 'border-box',
         display: 'inline-block',
         width: '50px',
-        height: '50px',
-        backgroundColor: '#B7B7B7'
+        height: '50px'
       }
     );
   });
@@ -118,7 +114,7 @@ describe("<LinkAvatar />", () => {
   });
 
   it("matches a provided HTML markup", () => {
-    let renderedHtml = '<div class="avatar link-avatar" data-radium="true" style="position: relative; z-index: 0; overflow: hidden; box-sizing: border-box; display: inline-block; background-color: rgb(183, 183, 183); width: 58px; height: 58px;"><a data-radium="true" style="display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
+    let renderedHtml = '<div class="avatar link-avatar" data-radium="true" style="overflow: hidden; display: inline-block; width: 58px; height: 58px;"><a data-radium="true" style="position: relative; z-index: 0; display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
     expect(
       mount(
         <LinkAvatar size={ 58 }>
@@ -179,15 +175,11 @@ describe("<LinkAvatar />", () => {
       .props()
       .style,
       {
-        position: 'relative',
         zIndex: 1,
-        MozBoxSizing: 'border-box',
         overflow: 'hidden',
-        boxSizing: 'border-box',
         display: 'inline-block',
         width: '50px',
-        height: '50px',
-        backgroundColor: '#B7B7B7'
+        height: '50px'
       }
     );
   });

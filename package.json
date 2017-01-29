@@ -1,6 +1,6 @@
 {
   "name": "react-simple-avatar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple component for showing avatar.",
   "main": "./lib/index.js",
   "module": "./lib/index.js",

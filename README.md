@@ -99,15 +99,15 @@ ReactDOM.render(
 );
 ```
 
-## Plugin
-
-Plugins accepted.
-
-## Contribute
+## Contribute &middot; [![](https://img.shields.io/gitter/room/react-simple-avatar/react-simple-avatar.svg)](https://gitter.im/react-simple-avatar/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 See [the contribute files](https://github.com/iTonyYo/react-simple-avatar/tree/master/.github)!
 
 PRs accepted.
+
+## Plugin
+
+Plugins accepted.
 
 ## Todo
 

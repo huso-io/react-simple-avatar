@@ -111,9 +111,18 @@ PRs accepted.
 
 ## Todo
 
-- [ ] add micro data
+- [ ] make it can receive micro data (in the discussion...)
+- [ ] make it can receive dataset (in the discussion...)
 - [ ] add doc for introducing how to build
+- [ ] add doc for introducing how to preview the given example in the local
+- [ ] add doc for introducing the inspiration for creating this component
+- [ ] add doc for introducing how to develop plugin for `react-simple-avatar`
+- [ ] provide schematic
+- [ ] provide roadmap
+- [ ] provide release notes
+- [ ] provide changelog
 - [ ] optimize docs
+- [ ] provide online preview
 
 ## License
 

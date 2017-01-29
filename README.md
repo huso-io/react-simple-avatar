@@ -111,7 +111,6 @@ PRs accepted.
 
 ## Todo
 
-- [ ] remove the special characters in description
 - [ ] add micro data
 - [ ] add doc for introducing how to build
 - [ ] optimize docs

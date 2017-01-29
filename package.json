@@ -18,7 +18,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "radium": "^0.18.1",
-    "react-fullcanvas": "^1.0.4",
+    "react-fullcanvas": "latest",
     "react-router": "^3.0.2"
   },
   "devDependencies": {

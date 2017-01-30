@@ -28,7 +28,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { RouterAvatar, LinkAvatar, Initials, Src } from 'react-simple-avatar';
 import FullCanvas from 'react-fullcanvas';
-import svgAvatar from './assets/img/avatar.svg';
 
 ReactDOM.render(
   <FullCanvas className='example'>
@@ -44,14 +43,15 @@ ReactDOM.render(
        style={ {color: '#f00'} }
        className='foundation-avatar-initials' />
       <Src
-       from={ svgAvatar }
+       from='http://placehold.it/58x58'
        style={ {display: 'inline-block'} }
        className='foundation-avatar-src' />
       /*
         or, you can put your own avatar plugin here.
         Maybe it's a layer to show user permissions;
         a loader for avatar; the avatar fetched from
-        twitter... Who knows what else ~
+        twitter; an hover effect layer... Who knows
+        what else ~
         ...
       */
     </RouterAvatar>
@@ -67,7 +67,6 @@ var React        = require('react');
 var ReactDOM     = require('react-dom');
 var SimpleAvatar = require('react-simple-avatar');
 var FullCanvas   = require('react-fullcanvas');
-var svgAvatar    = require('./assets/img/avatar.svg');
 
 ReactDOM.render(
   <FullCanvas className='example'>
@@ -83,14 +82,15 @@ ReactDOM.render(
        style={ {color: '#f00'} }
        className='foundation-avatar-initials' />
       <SimpleAvatar.Src
-       from={ svgAvatar }
+       from='http://placehold.it/58x58'
        style={ {display: 'inline-block'} }
        className='foundation-avatar-src' />
       /*
         or, you can put your own avatar plugin here.
         Maybe it's a layer to show user permissions;
         a loader for avatar; the avatar fetched from
-        twitter... Who knows what else ~
+        twitter; an hover effect layer... Who knows
+        what else ~
         ...
       */
     </SimpleAvatar.LinkAvatar>

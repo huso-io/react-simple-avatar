@@ -1,6 +1,6 @@
 # `<Avatar />` &middot;  [![npm version](https://img.shields.io/npm/v/react-simple-avatar.svg?style=flat)](https://www.npmjs.com/package/react-simple-avatar)&nbsp;[![Build Status](https://travis-ci.org/iTonyYo/react-simple-avatar.svg?branch=master)](https://travis-ci.org/iTonyYo/react-simple-avatar)&nbsp;[![Coverage Status](https://coveralls.io/repos/github/iTonyYo/react-simple-avatar/badge.svg?branch=master)](https://coveralls.io/github/iTonyYo/react-simple-avatar?branch=master)&nbsp;[![](https://img.shields.io/npm/dm/react-simple-avatar.svg)](https://www.npmjs.com/package/react-simple-avatar)&nbsp;[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contribute)&nbsp;[![Plugins Welcome](https://img.shields.io/badge/Plugins-welcome-brightgreen.svg)](#plugin)
 
-> A simple component for showing avatar.
+> A simple & flexible component for showing avatar.
 
 `react-simple-avatar` can be easily & highly customized. It just ensure the minimum but the most efficient code. You can use [plugins](#plugin) or write your own avatar layer component to extend it. It's suitable for react, react-router and react redux projects.
 

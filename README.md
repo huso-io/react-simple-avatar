@@ -10,6 +10,7 @@
 - [Usage](#usage)
 - [Plugin](#plugin)
 - [Contribute](#contribute)
+- [Alternative](#alternative)
 - [Todo](#todo)
 - [License](#license)
 
@@ -22,6 +23,8 @@ yarn add react-simple-avatar
 ## Usage
 
 > `react-simple-avatar` was built with classnames, radium.
+
+ES6 and CommonJS builds are available with each distribution. For example:
 
 ```javascript
 import React from 'react';
@@ -101,6 +104,8 @@ ReactDOM.render(
 
 ## Contribute &middot; [![](https://img.shields.io/gitter/room/react-simple-avatar/react-simple-avatar.svg)](https://gitter.im/react-simple-avatar/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
+Use GitHub issues for requests.
+
 See [the contribute files](https://github.com/iTonyYo/react-simple-avatar/tree/master/.github)!
 
 PRs accepted.
@@ -109,20 +114,37 @@ PRs accepted.
 
 Plugins accepted.
 
+## Alternative
+
+If you don’t agree with the choices made in this project, you might want to explore alternatives with different tradeoffs.
+
+Some of the more popular and actively maintained ones are:
+
+- [sitebase/react-avatar](https://www.npmjs.com/package/react-avatar)
+- [wbinnssmith/react-user-avatar](https://www.npmjs.com/package/react-user-avatar)
+
 ## Todo
 
 - [ ] make it can receive micro data (in the discussion...)
 - [ ] make it can receive dataset (in the discussion...)
+- [ ] make it more accessible for everyone
+- [ ] add doc for introducing accessibility
+- [ ] add doc like [`react-canvas`](https://github.com/Flipboard/react-canvas#react-canvas-components) for introducing each (high-order) component
 - [ ] add doc for introducing how to build
 - [ ] add doc for introducing how to preview the given example in the local
-- [ ] add doc for introducing the inspiration for creating this component
+- [ ] add doc for introducing the inspiration(or motivation) for creating this component
 - [ ] add doc for introducing how to develop plugin for `react-simple-avatar`
 - [ ] provide schematic
 - [ ] provide roadmap
 - [ ] provide release notes
 - [ ] provide changelog
-- [ ] optimize docs
 - [ ] provide online preview
+- [ ] show the conventions that project followed
+- [ ] provide help center(or recipes...)
+- [ ] add supported browsers
+- [ ] provide umd build
+- [ ] add `Thanks` section for some help from articles & developers
+- [ ] optimize docs
 
 ## License
 

@@ -62,7 +62,7 @@
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
     "through2": "^2.0.3",
-    "webpack": "2.2.0",
+    "webpack": "2.2.1",
     "webpack-dev-server": "2.2.0"
   },
   "peerDependencies": {

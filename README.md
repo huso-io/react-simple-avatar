@@ -30,35 +30,32 @@ ES6 and CommonJS builds are available with each distribution. For example:
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { RouterAvatar, LinkAvatar, Initials, Src } from 'react-simple-avatar';
-import FullCanvas from 'react-fullcanvas';
 
 ReactDOM.render(
-  <FullCanvas className='example'>
-    <RouterAvatar
-     to='#'
-     alt='沈维忠'
-     size={ 58 }
-     style={ {color: '#000'} }
-     className='foundation-avatar round-box-5px border-2px'>
-      <Initials
-       text='沈'
-       size={ 30 }
-       style={ {color: '#f00'} }
-       className='foundation-avatar-initials' />
-      <Src
-       from='http://placehold.it/58x58'
-       style={ {display: 'inline-block'} }
-       className='foundation-avatar-src' />
-      /*
-        or, you can put your own avatar plugin here.
-        Maybe it's a layer to show user permissions;
-        a loader for avatar; the avatar fetched from
-        twitter; an hover effect layer... Who knows
-        what else ~
-        ...
-      */
-    </RouterAvatar>
-  </FullCanvas>,
+  <RouterAvatar
+   to='#'
+   alt='沈维忠'
+   size={ 58 }
+   style={ {color: '#000'} }
+   className='foundation-avatar round-box-5px border-2px'>
+    <Initials
+     text='沈'
+     size={ 30 }
+     style={ {color: '#f00'} }
+     className='foundation-avatar-initials' />
+    <Src
+     from='http://placehold.it/58x58'
+     style={ {display: 'inline-block'} }
+     className='foundation-avatar-src' />
+    /*
+      or, you can put your own avatar plugin here.
+      Maybe it's a layer to show user permissions;
+      a loader for avatar; the avatar fetched from
+      twitter; an hover effect layer... Who knows
+      what else ~
+      ...
+    */
+  </RouterAvatar>,
   document.getElementById('root')
 );
 ```
@@ -69,35 +66,32 @@ Or,
 var React        = require('react');
 var ReactDOM     = require('react-dom');
 var SimpleAvatar = require('react-simple-avatar');
-var FullCanvas   = require('react-fullcanvas');
 
 ReactDOM.render(
-  <FullCanvas className='example'>
-    <SimpleAvatar.LinkAvatar
-     to='#'
-     alt='沈维忠'
-     size={ 58 }
-     style={ {color: '#000'} }
-     className='foundation-avatar round-box-5px border-2px'>
-      <SimpleAvatar.Initials
-       text='沈'
-       size={ 30 }
-       style={ {color: '#f00'} }
-       className='foundation-avatar-initials' />
-      <SimpleAvatar.Src
-       from='http://placehold.it/58x58'
-       style={ {display: 'inline-block'} }
-       className='foundation-avatar-src' />
-      /*
-        or, you can put your own avatar plugin here.
-        Maybe it's a layer to show user permissions;
-        a loader for avatar; the avatar fetched from
-        twitter; an hover effect layer... Who knows
-        what else ~
-        ...
-      */
-    </SimpleAvatar.LinkAvatar>
-  </FullCanvas>,
+  <SimpleAvatar.LinkAvatar
+   to='#'
+   alt='沈维忠'
+   size={ 58 }
+   style={ {color: '#000'} }
+   className='foundation-avatar round-box-5px border-2px'>
+    <SimpleAvatar.Initials
+     text='沈'
+     size={ 30 }
+     style={ {color: '#f00'} }
+     className='foundation-avatar-initials' />
+    <SimpleAvatar.Src
+     from='http://placehold.it/58x58'
+     style={ {display: 'inline-block'} }
+     className='foundation-avatar-src' />
+    /*
+      or, you can put your own avatar plugin here.
+      Maybe it's a layer to show user permissions;
+      a loader for avatar; the avatar fetched from
+      twitter; an hover effect layer... Who knows
+      what else ~
+      ...
+    */
+  </SimpleAvatar.LinkAvatar>,
   document.getElementById('root')
 );
 ```
@@ -134,6 +128,7 @@ Some of the more popular and actively maintained ones are:
 - [ ] add doc for introducing how to preview the given example in the local
 - [ ] add doc for introducing the inspiration(or motivation) for creating this component
 - [ ] add doc for introducing how to develop plugin for `react-simple-avatar`
+- [ ] tell the advantages
 - [ ] provide schematic
 - [ ] provide roadmap
 - [ ] provide release notes

@@ -138,7 +138,7 @@ Some of the more popular and actively maintained ones are:
 - [ ] provide help center(or recipes...)
 - [ ] add supported browsers
 - [ ] provide umd build
-- [ ] add `Thanks` section for some help from articles & developers
+- [ ] add `Thanks` section for some help from articles & developers(like [node-config](https://github.com/lorenwest/node-config#contributors) did)
 - [ ] optimize docs
 
 ## License

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { RouterAvatar, LinkAvatar, Initials, Src } from './component/Avatar';
 import Radium from 'radium';
-import FullCanvas from 'react-fullcanvas';
+import { FullCanvas } from 'react-layout-kits';
 
 class App extends Component {
   render() {

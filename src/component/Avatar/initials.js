@@ -3,7 +3,7 @@
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
 import cn from 'classnames';
-import FullCanvas from 'react-fullcanvas';
+import { FullCanvas } from 'react-layout-kits';
 
 let styles = {
   default: {

@@ -2,7 +2,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import Radium from 'radium';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom'
 import cn from 'classnames';
 
 let styles = {

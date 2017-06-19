@@ -13,7 +13,8 @@ import {
 
 const getExternalIpAddress = () => {
   let externalIpAddress;
-  forEach(networkInterfaces().en0, (item) => {
+  let ExternalNetworkInterfaces = networkInterfaces().en0 || networkInterfaces().en5;
+  forEach(ExternalNetworkInterfaces, (item) => {
     if (isEqual(get(item, 'family'), 'IPv4')) {
       externalIpAddress = get(item, 'address');
     }

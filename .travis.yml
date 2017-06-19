@@ -4,10 +4,11 @@ node_js:
   - "6.9.1"
   - "7.3.0"
   - "7.4.0"
-before_install:
-  - npm install -g npm
-  - npm install -g babel
-  - npm install -g gulp
-  - npm install -g mocha
-  - npm install -g chai
+  - "7.5.0"
+  - "7.6.0"
+  - "8.0.0"
+cache:
+  yarn: true
+install:
+  - yarn install
 after_success: npm run coverage

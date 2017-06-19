@@ -4,6 +4,82 @@
   "description": "A simple & flexible component for showing avatar.",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
+  "pre-commit": [
+    "lint",
+    "flow",
+    "validate",
+    "test"
+  ],
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.3",
+    "yarn": ">=0.24.6"
+  },
+  "scripts": {
+    "check-large-dirs": "node_modules/.bin/space-hogs",
+    "pre-dev": "yarn install --force --check-files --har && yarn check-large-dirs",
+    "start": "node_modules/.bin/cross-env BABEL_ENV=development node_modules/.bin/webpack-dev-server --env=dev --progress --colors --open",
+    "build": "node_modules/.bin/cross-env BABEL_ENV=production gulp",
+    "lint": "node_modules/.bin/eslint -c .eslintrc --quiet ./src/**",
+    "test": "node_modules/.bin/nyc --reporter=html --reporter=text node_modules/.bin/mocha test/setup.js test/index.js",
+    "flow": "node_modules/.bin/flow check",
+    "coverage": "node_modules/.bin/nyc report --reporter=text-lcov | node_modules/.bin/coveralls",
+    "validate": "yarn list"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "radium": "^0.19.1",
+    "react-layout-kits": "^0.2.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
+    "babel-plugin-transform-es3-property-literals": "^6.22.0",
+    "babel-plugin-transform-jscript": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.0.2",
+    "config": "^1.26.1",
+    "coveralls": "^2.13.1",
+    "cross-env": "^5.0.1",
+    "del": "^3.0.0",
+    "enzyme": "^2.8.2",
+    "eslint": "^4.0.0",
+    "eslint-plugin-compat": "^1.0.3",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
+    "flow-bin": "^0.48.0",
+    "flow-remove-types": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "jsdom": "^11.0.0",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "mocha": "^3.4.2",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^11.0.2",
+    "precommit-hook": "^3.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "next",
+    "require-dir": "^0.3.2",
+    "run-sequence": "^1.2.2",
+    "space-hogs": "^1.5.0",
+    "through2": "^2.0.3",
+    "webpack": "2.6.1",
+    "webpack-dev-server": "2.4.5"
+  },
   "author": [
     "iTonyYo <ceo@holaever.com> (https://itonyyo.com)"
   ],
@@ -15,71 +91,6 @@
   "bugs": {
     "url": "https://github.com/iTonyYo/react-simple-avatar/issues"
   },
-  "scripts": {
-    "start": "cross-env BABEL_ENV=development node_modules/.bin/webpack-dev-server --env=dev --progress --colors --open",
-    "build": "cross-env BABEL_ENV=production gulp",
-    "lint": "node_modules/.bin/eslint -c .eslintrc --quiet ./src/**",
-    "test": "node_modules/.bin/nyc --reporter=html --reporter=text node_modules/.bin/mocha test/setup.js test/index.js",
-    "flow": "node_modules/.bin/flow check",
-    "coverage": "node_modules/.bin/nyc report --reporter=text-lcov | node_modules/.bin/coveralls"
-  },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "radium": "^0.18.1",
-    "react-layout-kits": "^0.1.2",
-    "react-router-dom": "^4.0.0"
-  },
-  "devDependencies": {
-    "babel-core": "^6.24.0",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.4.0",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
-    "babel-plugin-transform-es3-property-literals": "^6.22.0",
-    "babel-plugin-transform-jscript": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-env": "^1.2.1",
-    "babel-preset-latest": "^6.24.0",
-    "babel-preset-react": "^6.23.0",
-    "chai": "^3.5.0",
-    "config": "^1.25.1",
-    "coveralls": "^2.12.0",
-    "cross-env": "^3.2.3",
-    "del": "^2.2.2",
-    "enzyme": "^2.7.1",
-    "eslint": "^3.17.1",
-    "eslint-plugin-compat": "^1.0.2",
-    "eslint-plugin-flowtype": "^2.30.3",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0",
-    "flow-bin": "^0.41.0",
-    "flow-remove-types": "^1.2.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "jsdom": "^9.12.0",
-    "lodash": "^4.17.4",
-    "minimist": "^1.2.0",
-    "mocha": "^3.2.0",
-    "mocha-lcov-reporter": "^1.3.0",
-    "nyc": "^10.1.2",
-    "react": "^15.4.2",
-    "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-hot-loader": "next",
-    "require-dir": "^0.3.1",
-    "run-sequence": "^1.2.2",
-    "through2": "^2.0.3",
-    "webpack": "2.2.1",
-    "webpack-dev-server": "2.4.1"
-  },
-  "peerDependencies": {
-    "react": "^15.4.2"
-  },
-  "browserify-shim": {
-    "react": "global:React"
-  },
   "keywords": [
     "react",
     "avatar",
@@ -88,10 +99,5 @@
     "react-avatar"
   ],
   "private": false,
-  "engines": {
-    "node": ">=7.4.0",
-    "npm": ">=4.1.2",
-    "yarn": ">=0.21.3"
-  },
   "license": "MIT"
 }

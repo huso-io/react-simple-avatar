@@ -15,12 +15,12 @@
     "flowtype",
     "compat"
   ],
-  "ecmaFeatures": {
-    "jsx": true
-  },
   "settings": {
     "flowtype": {
       "onlyFilesWithFlowAnnotation": true
     }
+  },
+  "parserOptions": {
+    "sourceType": "module",
   }
 }

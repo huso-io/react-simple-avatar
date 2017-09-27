@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
@@ -22,34 +20,24 @@ let styles = {
   }
 };
 
+const PROPTYPES = {
+  size: PropTypes.number.isRequired,
+  to: PropTypes.string,
+  alt: PropTypes.string,
+  style: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+    PropTypes.object
+  ]),
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object
+  ]),
+};
+
 @Radium
 class RouterAvatar extends Component {
-  static childContextTypes = {
-    alt: PropTypes.string
-  };
-  static propTypes = {
-    size: PropTypes.number.isRequired,
-    to: PropTypes.string,
-    alt: PropTypes.string,
-    style: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.string,
-      PropTypes.object
-    ]),
-    className: PropTypes.string,
-    children: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.object
-    ])
-  }
-  constructor(props: Object) {
-    super(props);
-  }
-  getChildContext() {
-    return {
-      alt: this.props.alt
-    };
-  }
   render() {
     let {
       to,
@@ -59,6 +47,7 @@ class RouterAvatar extends Component {
       className,
       children
     } = this.props;
+
     return (
       <div style={ [styles.default.container, style, {width: size + 'px', height: size + 'px'}] }
            className={ cn('avatar router-avatar', className) }
@@ -71,5 +60,7 @@ class RouterAvatar extends Component {
     );
   }
 }
+
+RouterAvatar.propTypes = PROPTYPES;
 
 export default RouterAvatar;

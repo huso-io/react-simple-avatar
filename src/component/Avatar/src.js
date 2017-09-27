@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
@@ -23,40 +21,37 @@ let styles = {
   }
 };
 
+const PROPTYPES = {
+  from: PropTypes.string,
+  style: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+    PropTypes.object
+  ]),
+  className: PropTypes.string,
+};
+
 @Radium
 class Src extends Component {
-  static contextTypes = {
-    alt: PropTypes.string
-  };
-  static propTypes = {
-    from: PropTypes.string,
-    style: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.string,
-      PropTypes.object
-    ]),
-    className: PropTypes.string
-  }
-  constructor(props: Object, context: Object) {
-    super(props, context);
-  }
   render() {
     let {
       from,
       style,
-      className
+      className,
     } = this.props;
+
     return (
       <FullCanvas
        style={ [styles.default.layer, style] }
        className={ cn('avatar-src', className) }>
         <img
-         alt={ this.context.alt }
          src={ from }
          style={ styles.default.img }/>
       </FullCanvas>
     );
   }
 }
+
+Src.propTypes = PROPTYPES;
 
 export default Src;

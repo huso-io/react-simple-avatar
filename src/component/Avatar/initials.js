@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
@@ -30,24 +28,19 @@ let styles = {
   }
 };
 
+const PROPTYPES = {
+  size: PropTypes.number.isRequired,
+  text: PropTypes.string,
+  style: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+    PropTypes.object,
+  ]),
+  className: PropTypes.string,
+};
+
 @Radium
 class Initials extends Component {
-  static contextTypes = {
-    alt: PropTypes.string
-  };
-  static propTypes = {
-    size: PropTypes.number.isRequired,
-    text: PropTypes.string,
-    style: PropTypes.oneOfType([
-      PropTypes.array,
-      PropTypes.string,
-      PropTypes.object
-    ]),
-    className: PropTypes.string
-  }
-  constructor(props: Object, context: Object) {
-    super(props, context);
-  }
   render() {
     let {
       size,
@@ -55,6 +48,7 @@ class Initials extends Component {
       style,
       className
     } = this.props;
+
     return (
       <FullCanvas
        style={ styles.default.layer }
@@ -66,5 +60,7 @@ class Initials extends Component {
     );
   }
 }
+
+Initials.propTypes = PROPTYPES;
 
 export default Initials;

@@ -1,6 +1,10 @@
 require('babel-core/register')();
 
 const { JSDOM } = require('jsdom');
+const { configure } = require('enzyme');
+const Adapter = require('enzyme-adapter-react-16');
+
+configure({ adapter: new Adapter() });
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;

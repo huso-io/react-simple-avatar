@@ -1,5 +1,3 @@
-// @flow
-
 import Initials from './initials.js';
 import RouterAvatar from './router.avatar.js';
 import LinkAvatar from './link.avatar.js';

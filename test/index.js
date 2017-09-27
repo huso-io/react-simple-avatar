@@ -31,32 +31,30 @@ describe('<RouterAvatar />', () => {
   });
 
   it('matches a provided HTML markup', () => {
-    let renderedHtml = '<div class="avatar router-avatar" data-radium="true" style="overflow: hidden; display: inline-block; width: 58px; height: 58px;"><a href="/profile" style="position: relative; z-index: 0; display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
-    expect(
-      mount(
-        <Router>
-          <RouterAvatar to='/profile' size={ 58 }>
-            <Src from='http://placehold.it/16x16'/>
-          </RouterAvatar>
-        </Router>
-      )
-      .html()
-    ).to.equal(renderedHtml);
+    let mounted = mount(
+      <Router>
+        <RouterAvatar to='/profile' size={ 58 }>
+          <Src from='http://placehold.it/16x16'/>
+        </RouterAvatar>
+      </Router>
+    )
+    .html();
+
+    let renderedHtml = '<div style="overflow: hidden; display: inline-block; width: 58px; height: 58px;" class="avatar router-avatar" data-radium="true"><a style="position: relative; z-index: 0; display: block; width: 100%; height: 100%;" href="/profile"><div style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;" class="full-canvas avatar-src" data-radium="true"><img src="http://placehold.it/16x16" style="float: left; width: 100%; height: 100%; max-width: none;" data-radium="true"></div></a></div>';
+    expect(mounted).to.equal(renderedHtml);
   });
 
   it('contains only one node', () => {
-    expect(
-      mount(
-        <Router>
-          <RouterAvatar to='/profile' size={ 58 }>
-            <Initials size={ 30 }/>
-            <Src from='http://placehold.it/16x16'/>
-          </RouterAvatar>
-        </Router>
-      )
-      .find('.avatar-src')
-      .length
-    ).to.equal(1);
+    let mounted = mount(
+      <Router>
+        <RouterAvatar to='/profile' size={ 58 }>
+          <Initials size={ 30 }/>
+          <Src from='http://placehold.it/16x16'/>
+        </RouterAvatar>
+      </Router>
+    );
+
+    expect(mounted.find('img').length).to.equal(1);
   });
 
   it('exists the current node', () => {
@@ -108,15 +106,14 @@ describe('<LinkAvatar />', () => {
   });
 
   it('matches a provided HTML markup', () => {
-    let renderedHtml = '<div class="avatar link-avatar" data-radium="true" style="overflow: hidden; display: inline-block; width: 58px; height: 58px;"><a data-radium="true" style="position: relative; z-index: 0; display: block; width: 100%; height: 100%;"><div class="full-canvas avatar-src" data-radium="true" style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;"><img src="http://placehold.it/16x16" data-radium="true" style="float: left; width: 100%; height: 100%; max-width: none;"></div></a></div>';
-    expect(
-      mount(
-        <LinkAvatar size={ 58 }>
-          <Src from='http://placehold.it/16x16'/>
-        </LinkAvatar>
-      )
-      .html()
-    ).to.equal(renderedHtml);
+    let mounted = mount(
+      <LinkAvatar size={ 58 }>
+        <Src from='http://placehold.it/16x16'/>
+      </LinkAvatar>
+    )
+    .html();
+    let renderedHtml = '<div style="overflow: hidden; display: inline-block; width: 58px; height: 58px;" class="avatar link-avatar" data-radium="true"><a style="position: relative; z-index: 0; display: block; width: 100%; height: 100%;" data-radium="true"><div style="overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; position: absolute; z-index: 2; top: 0px; left: 0px;" class="full-canvas avatar-src" data-radium="true"><img src="http://placehold.it/16x16" style="float: left; width: 100%; height: 100%; max-width: none;" data-radium="true"></div></a></div>';
+    expect(mounted).to.equal(renderedHtml);
   });
 
   it('contains only one node', () => {
@@ -127,7 +124,7 @@ describe('<LinkAvatar />', () => {
           <Src from='http://placehold.it/16x16'/>
         </LinkAvatar>
       )
-      .find('.avatar-src')
+      .find('img')
       .length
     ).to.equal(1);
   });
@@ -156,24 +153,5 @@ describe('<LinkAvatar />', () => {
       .props()
       .className
     ).to.equal('avatar link-avatar round-box-5px border-2px');
-  });
-
-  it('matches a provided final style', () => {
-    assert.deepEqual(
-      shallow(
-        <LinkAvatar
-         size={ 50 }
-         style={{zIndex: 1}} />
-      )
-      .props()
-      .style,
-      {
-        zIndex: 1,
-        overflow: 'hidden',
-        display: 'inline-block',
-        width: '50px',
-        height: '50px'
-      }
-    );
   });
 });
